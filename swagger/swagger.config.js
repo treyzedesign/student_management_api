@@ -1,6 +1,6 @@
 const swaggerJsdoc = require('swagger-jsdoc');
 
-const serverUrl = `http://localhost:${process.env.USER_PORT || 3000}`;
+const serverUrl = process.env.ENV === 'development' ? `http://localhost:${process.env.USER_PORT || 3000}` : process.env.LIVE_URL || 'https://your-production-url.com';
 
 const options = {
   definition: {
