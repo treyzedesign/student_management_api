@@ -20,8 +20,6 @@ module.exports = class UserServer {
 
     /** server configs */
     run(){
-        // ===== Security Headers with Helmet =====
-        app.use(helmet());
 
         // ===== Rate Limiting Configuration =====
         // General API rate limiter: 100 requests per 15 minutes
